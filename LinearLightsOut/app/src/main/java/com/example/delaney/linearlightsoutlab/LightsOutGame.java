@@ -9,7 +9,7 @@ import java.util.Random;
  * match.
  */
 public class LightsOutGame {
-    public static final int MIN_NUM_BUTTONS = 3;
+    public static final int MIN_NUM_BUTTONS = 7;
     private static final int RANDOMIZER_MULTIPLIER = 10;
     private int[] mButtonValues;
     private int mNumPresses;
