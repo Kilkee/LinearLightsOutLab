@@ -6,11 +6,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private LightsOutGame mGame;
     private TextView mGameStateTextView;
-    private Button[] mButtons;
+
+    private List<Button> mButtons;
+
+
+    //private Button[] mButtons;
 
 
     @Override
@@ -19,15 +26,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mGame = new LightsOutGame();
-mGameStateTextView = findViewById(R.id.game_state_text_view);
-        mButtons = new Button[LightsOutGame.MIN_NUM_BUTTONS];
-        mButtons[0]= findViewById(R.id.button0);
-        mButtons[1]= findViewById(R.id.button1);
-        mButtons[2]= findViewById(R.id.button2);
-        mButtons[3]= findViewById(R.id.button3);
-        mButtons[4]= findViewById(R.id.button4);
-        mButtons[5]= findViewById(R.id.button5);
-        mButtons[6]= findViewById(R.id.button6);
+        mGameStateTextView = findViewById(R.id.game_state_text_view);
+     //   mButtons = new Button[LightsOutGame.MIN_NUM_BUTTONS];  // make a new array with 7 spots available
+      //  mButtons[0]= findViewById(R.id.button0);
+      //  mButtons[1]= findViewById(R.id.button1);
+      //  mButtons[2]= findViewById(R.id.button2);
+      //  mButtons[3]= findViewById(R.id.button3);
+      //  mButtons[4]= findViewById(R.id.button4);
+      //  mButtons[5]= findViewById(R.id.button5);
+      //  mButtons[6]= findViewById(R.id.button6);
+
+        mButtons = new ArrayList<>();
+        mButtons.add((Button) findViewById(R.id.button0));
+        mButtons.add((Button) findViewById(R.id.button1));
+        mButtons.add((Button) findViewById(R.id.button2));
+        mButtons.add((Button) findViewById(R.id.button3));
+        mButtons.add((Button) findViewById(R.id.button4));
+        mButtons.add((Button) findViewById(R.id.button5));
+        mButtons.add((Button) findViewById(R.id.button6));
+
 
 
 
@@ -48,7 +65,9 @@ mGameStateTextView = findViewById(R.id.game_state_text_view);
     }
 
     private void updateView() {
-     //   mGameStateTextView.setText(mGame.setAllValues());
+      // mGameStateTextView.setText(mGame.getValueAtIndex());
+
+
 
     }
 
