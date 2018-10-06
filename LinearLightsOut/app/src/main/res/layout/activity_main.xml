@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/background">
-
-
+    android:background="@color/background">>
 
     <LinearLayout
         android:id="@+id/board"
@@ -15,22 +14,17 @@
         android:layout_margin="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
 
-        >
-
+        android:layout_centerInParent="true">
 
 
         <Button
-
-
             android:id="@+id/button0"
             android:onClick="pressedSquare"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:tag="0"
-
-
+            android:text="1"
             />
 
         <Button
@@ -39,6 +33,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:tag="1"
+            android:text="1"
             />
 
         <Button
@@ -47,8 +42,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:tag="2"
-
-        />
+            android:text="1"
+            />
 
         <Button
             android:id="@+id/button3"
@@ -56,7 +51,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:tag="3"
-
+            android:text="1"
             />
 
         <Button
@@ -65,7 +60,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:tag="4"
-
+            android:text="1"
             />
 
         <Button
@@ -74,6 +69,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:tag="5"
+            android:text="1"
             />
 
         <Button
@@ -82,11 +78,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:tag="6"
-
+            android:text="1"
             />
-
-
-
     </LinearLayout>
 
     <TextView
@@ -96,22 +89,24 @@
         android:layout_above="@id/board"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        android:text="@string/label_start"
+        android:text="@string/message_format"
         android:textColor="@color/textColor"
         android:textSize="20sp"
         android:textStyle="bold"
         />
 
     <Button
-        android:id="@+id/newGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_alignRight="@id/board"
         android:layout_below="@id/board"
         android:text="@string/new_game"
         android:onClick="pressedNewGame"
-        />
-
-
+    />
 
 </RelativeLayout>
