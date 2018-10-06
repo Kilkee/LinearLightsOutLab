@@ -9,7 +9,7 @@ import java.util.Random;
  * match.
  */
 public class LightsOutGame {
-    public static final int MIN_NUM_BUTTONS = 7;
+    public static final int MIN_NUM_BUTTONS = 3;
     private static final int RANDOMIZER_MULTIPLIER = 10;
     private int[] mButtonValues;
     private int mNumPresses;
@@ -23,6 +23,7 @@ public class LightsOutGame {
     }
 
     /**
+     * Constructor
      * Create a new linear lights out game with a certain number of buttons
      *
      * @param numButtons Number of buttons in this linear lights out game
@@ -30,11 +31,11 @@ public class LightsOutGame {
     public LightsOutGame(int numButtons) {
         if (numButtons < MIN_NUM_BUTTONS) {
             // CONSIDER: Throw an exception.  For now just enforce the minimum.
-            numButtons = MIN_NUM_BUTTONS;
+            numButtons = MIN_NUM_BUTTONS;  // this means 3 is the mininum number of buttons that you need for this game
         }
         mDoingSetup = true;
         mButtonValues = new int[numButtons];
-        randomizeButtons();
+        randomizeButtons();   //Calls the randomizeButtons method below
         mDoingSetup = false;
     }
 
